@@ -4,18 +4,27 @@
     <meta charset="utf-8">
     <title>My First VR World</title>
     <script src="aframe.min.js"></script>
+     <script src="aframe-startplay-component.js"></script>
   </head>
   <body>
   <!-- add VR here -->
      <a-scene>
+       <a-assets timeout="10000">
+        <video id="trailer" src="comp_Trailer_Hahahhaha.mp4" loop="true"></video>
+      </a-assets>
        <a-sphere position="0 1.25 -1" radius="1.25" color="#002D5E"></a-sphere>
        <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
+       <a-box position="4 0.5 1" rotation="4 45 0" width="4" height="4" depth="1" color="00FF3D9"></a-box>
        <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-       <a-plane rotation="-90 0 0" width="4" height="4" src="vr.jpg"></a-plane>
-       <a-sky color="#030303"></a-sky>
+       <a-plane rotation="-90 0 0" width="4" height="4" src="Ohrringe.png"></a-plane>
+       <a-sky startplay src="#trailer" rotation="0 180 0"></a-sky>
+       <a-text value="JeniferBotWorld" color="4440" position="-4.4 1 2" width=10></a-text>
        <a-entity position="0 0 3.8">
          <a-camera></a-camera>
        </a-entity>
     </a-scene>
   </body>
 </html>
+
+
+
